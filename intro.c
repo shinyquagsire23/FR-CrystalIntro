@@ -263,10 +263,80 @@ void notMain()
 		else if(TIMER[0] < 181)
 		{
 			init[27] = 7;
-			init[0] = 1;
+			init[0] = 0;
 			TIMER[0] = 0;
 		}
 	}
+	else if(init[27] == 7)
+	{
+		if(TIMER[0] < 120)
+			scrollEpicBackground();
+		else if(TIMER[0] < 125)
+		{
+			shiftUnown(0);
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 130)
+		{
+			shiftUnown(1);
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 135)
+		{
+			shiftUnown(2);
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 140)
+		{
+			shiftUnown(3);
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 145)
+		{
+			shiftUnown(4);
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 240){scrollEpicBackground();}
+		else if(TIMER[0] < 241)
+		{
+			fadeScreenFast();
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 270){scrollEpicBackground();}
+		else if(TIMER[0] < 271)
+		{
+			init[27] = 8;
+			init[0] = 0;
+			TIMER[0] = 0;
+		}
+	}
+	else if(init[27] == 8)
+	{
+		if(TIMER[0] < 168)
+		{
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 169)
+		{
+			scrollEpicBackground();
+			fadeScreenFast();
+		}
+		if(TIMER[0] < 200)
+		{
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 201)
+		{
+			init[27] = 9;
+			init[0] = 0;
+			TIMER[0] = 0;
+		}
+	}
+	else if(init[27] == 9)
+	{
+		scrollEpicBackground();
+	}
+
 	if(keyDown(KEY_A))
 	{
 		int (*func)(void) = (int (*)(void))0x0800CC7B;
@@ -281,5 +351,6 @@ void notMain()
 #include "companylogo.c"
 #include "unown.c"
 #include "trees.c"
+#include "epicsuicune.c"
 #include "useful.h"
 
