@@ -1,0 +1,28 @@
+
+//{{BLOCK(sparkle1)
+
+//======================================================================
+//
+//	sparkle1, 32x32@4, 
+//	+ palette 16 entries, not compressed
+//	+ 16 tiles lz77 compressed
+//	Total size: 32 + 124 = 156
+//
+//	Time-stamp: 2013-08-05, 17:56:31
+//	Exported by Cearn's GBA Image Transmogrifier, v0.8.6
+//	( http://www.coranac.com/projects/#grit )
+//
+//======================================================================
+
+#ifndef GRIT_SPARKLE1_H
+#define GRIT_SPARKLE1_H
+
+#define sparkle1TilesLen 124
+extern const unsigned short sparkle1Tiles[62];
+
+#define sparkle1PalLen 32
+extern const unsigned short sparkle1Pal[16];
+
+#endif // GRIT_SPARKLE1_H
+
+//}}BLOCK(sparkle1)

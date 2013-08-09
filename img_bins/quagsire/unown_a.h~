@@ -1,0 +1,28 @@
+
+//{{BLOCK(unown_a)
+
+//======================================================================
+//
+//	unown_a, 32x64@4, 
+//	+ palette 16 entries, not compressed
+//	+ 32 tiles lz77 compressed
+//	Total size: 32 + 544 = 576
+//
+//	Time-stamp: 2013-08-05, 19:48:10
+//	Exported by Cearn's GBA Image Transmogrifier, v0.8.6
+//	( http://www.coranac.com/projects/#grit )
+//
+//======================================================================
+
+#ifndef GRIT_UNOWN_A_H
+#define GRIT_UNOWN_A_H
+
+#define unown_aTilesLen 544
+extern const unsigned short unown_aTiles[272];
+
+#define unown_aPalLen 32
+extern const unsigned short unown_aPal[16];
+
+#endif // GRIT_UNOWN_A_H
+
+//}}BLOCK(unown_a)
