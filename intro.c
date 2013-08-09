@@ -124,9 +124,25 @@ void notMain()
 		{
 			treePan();
 		}
-		else if(TIMER[0] < 140)
+		else if(TIMER[0] < 120)
 		{
 			moveSuicune();
+		}
+		else if(TIMER[0] < 125)
+		{
+			shiftGrass();
+		}
+		else if(TIMER[0] < 130)
+		{
+			unshiftGrass();
+		}
+		else if(TIMER[0] < 135)
+		{
+			shiftGrass();
+		}
+		else if(TIMER[0] < 140)
+		{
+			unshiftGrass();
 		}
 		else if(TIMER[0] < 145)
 		{
@@ -136,49 +152,78 @@ void notMain()
 		{
 			unshiftGrass();
 		}
-		else if(TIMER[0] < 155)
-		{
-			shiftGrass();
-		}
-		else if(TIMER[0] < 160)
-		{
-			unshiftGrass();
-		}
-		else if(TIMER[0] < 165)
-		{
-			shiftGrass();
-		}
-		else if(TIMER[0] < 170)
-		{
-			unshiftGrass();
-		}
-		else if(TIMER[0] < 200)
+		else if(TIMER[0] < 180)
 		{
 			moveWooper();
 		}
-		else if(TIMER[0] < 210){}
-		else if(TIMER[0] < 240)
+		else if(TIMER[0] < 190){}
+		else if(TIMER[0] < 220)
 		{
 			movePichu();
 		}
-		else if(TIMER[0] < 250)
+		else if(TIMER[0] < 230)
 		{
 			shiftPichu(1);
 		}
-		else if(TIMER[0] < 260)
+		else if(TIMER[0] < 240)
 		{
 			shiftPichu(2);
 		}
-		else if(TIMER[0] < 290){}
-		else if(TIMER[0] < 291)
+		else if(TIMER[0] < 270){}
+		else if(TIMER[0] < 271)
 		{
 			fadeScreenFast();
 		}
-		else if(TIMER[0] < 300){}
-		else if(TIMER[0] < 301)
+		else if(TIMER[0] < 330){}
+		else if(TIMER[0] < 331)
 		{
 			init[27] = 5;
 			init[0] = 0;
+			TIMER[0] = 0;
+		}
+	}
+	else if(init[27] == 5)
+	{
+		//BEST HUGS (evar!)
+		//un3Test();
+		if(TIMER[0] < 30)
+		{
+			showDuck();
+		}
+		else if(TIMER[0] < 60)
+		{
+			showE();
+		}
+		else if(TIMER[0] < 90)
+		{
+			showS();
+		}
+		else if(TIMER[0] < 120)
+		{
+			showT();
+		}
+
+		else if(TIMER[0] < 135)
+		{
+			showH();
+		}
+		else if(TIMER[0] < 150)
+		{
+			showU();
+		}
+		else if(TIMER[0] < 165)
+		{
+			showG();
+		}
+		else if(TIMER[0] < 180)
+		{
+			showS2();
+		}
+		else if(TIMER[0] < 180){}
+		else if(TIMER[0] < 181)
+		{
+			init[27] = 6;
+			init[0] = 1;
 			TIMER[0] = 0;
 		}
 	}

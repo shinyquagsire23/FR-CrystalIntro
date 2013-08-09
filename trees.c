@@ -26,14 +26,52 @@ void treePan()
 
 void moveSuicune()
 {
+	doFastAnimTimer();
 	if(OAM_Mem[1] > 0xC000)
 	{
-		OAM_Mem[1] = OAM_Mem[1] - 8;
+		OAM_Mem[1] = OAM_Mem[1] - 16;
 	}
 	else
 	{
 		OAM_Mem[1] = 0xC1FF;
 	}
+
+	if(TIMER[1] < 11)
+	{
+		VAR[20] = VAR[20] + 1;
+		if(VAR[20] > 3)
+			VAR[20] = 0;
+	}
+	else
+	{
+		VAR[20] = VAR[20] + 1;
+		if(VAR[20] > 3)
+			VAR[20] = 0;
+	}
+
+	if(VAR[20] == 0)
+	{
+		LZ77UnCompVram(&suicune1Tiles, &OBJData[0x200]);
+	}
+	else if(VAR[20] == 1)
+	{
+		LZ77UnCompVram(&suicune2Tiles, &OBJData[0x200]);
+	}
+	else if(VAR[20] == 2)
+	{
+		LZ77UnCompVram(&suicune3Tiles, &OBJData[0x200]);
+	}
+	else if(VAR[20] == 3)
+	{
+		LZ77UnCompVram(&suicune4Tiles, &OBJData[0x200]);
+	}
+}
+
+void doFastAnimTimer()
+{
+	TIMER[1] = TIMER[1] + 1;
+	if(TIMER[1] > 22)
+		TIMER[1] = 0;
 }
 
 void moveWooper()
