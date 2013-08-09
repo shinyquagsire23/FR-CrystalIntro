@@ -219,10 +219,50 @@ void notMain()
 		{
 			showS2();
 		}
-		else if(TIMER[0] < 180){}
 		else if(TIMER[0] < 181)
 		{
+			fadeScreenFast();
+		}
+		else if(TIMER[0] < 240){}
+		else if(TIMER[0] < 241)
+		{
 			init[27] = 6;
+			init[0] = 1;
+			TIMER[0] = 0;
+		}
+	}
+	else if(init[27] == 6)
+	{
+		if(TIMER[0] < 100)
+		{
+			treeDashing();
+		}
+		else if(TIMER[0] < 120)
+		{
+			treeDashing();
+			moveSuicuneDashing();
+		}
+		else if(TIMER[0] < 140)
+		{
+			treeDashing();
+			moveSuicuneDashingFaster();
+		}
+		else if(TIMER[0] < 160)
+		{
+			treeDashing();
+		}
+		else if(TIMER[0] < 161)
+		{
+			fadeScreenFast();
+			treeDashing();
+		}
+		else if(TIMER[0] < 180)
+		{
+			treeDashing();
+		}
+		else if(TIMER[0] < 181)
+		{
+			init[27] = 7;
 			init[0] = 1;
 			TIMER[0] = 0;
 		}

@@ -5,12 +5,10 @@
 
 void treePan()
 {
-	doAnimTimer();
 	if(init[0] == 1)
 	{
 		loadTreeGFX();
 	}	
-	something(1,2,3);
 	VAR[17] = VAR[17] + 1;
 	if(VAR[19] == 0)
 	{
@@ -22,6 +20,66 @@ void treePan()
 	changeIO(0x10,VAR[18]);
 	changeIO(0x14,VAR[18]);
 	changeIO(0x18,VAR[17]);
+}
+
+void treeDashing()
+{
+	if(init[0] == 1)
+	{
+		loadTreeGFX();
+		changeIO(0x10,0x1FF);
+		changeIO(0x14,0x1FF);
+		changeIO(0x18,0x1FF);
+		OAM_Mem[1] = 0xC060;
+	}	
+	VAR[17] = VAR[17] - 12;
+	if(VAR[19] == 0)
+	{
+		VAR[18] = VAR[18] - 12;
+		VAR[19] = 1;
+	}
+	else
+		VAR[19] = 0;
+
+	if(VAR[17] == 0 || VAR[17] > 0x1FF)
+		VAR[17] = 0x1FF;
+
+	if(VAR[18] == 0 || VAR[18] > 0x1FF)
+		VAR[18] = 0x1FF;
+	changeIO(0x10,VAR[18]);
+	changeIO(0x14,VAR[18]);
+	changeIO(0x18,VAR[17]);
+	animateSuicune();
+}
+
+void moveSuicuneDashing()
+{
+	doFastAnimTimer();
+	if(OAM_Mem[1] > 0xC000)
+	{
+		OAM_Mem[1] = OAM_Mem[1] - 4;
+	}
+	else
+	{
+		OAM_Mem[1] = 0xC1FF;
+	}
+
+	animateSuicune();
+}
+
+void moveSuicuneDashingFaster()
+{
+	doFastAnimTimer();
+	if(OAM_Mem[1] > 0xC000)
+	{
+		OAM_Mem[1] = OAM_Mem[1] - 8;
+	}
+	else
+	{
+		OAM_Mem[1] = 0xC1FF;
+	}
+
+	animateSuicune();
 }
 
 void moveSuicune()
@@ -36,17 +94,21 @@ void moveSuicune()
 		OAM_Mem[1] = 0xC1FF;
 	}
 
-	if(TIMER[1] < 11)
+	animateSuicune();
+}
+
+void animateSuicune()
+{
+	if(VAR[19] == 1 && VAR[22] >= 2)
 	{
+		VAR[22] = 0;
 		VAR[20] = VAR[20] + 1;
 		if(VAR[20] > 3)
 			VAR[20] = 0;
 	}
 	else
 	{
-		VAR[20] = VAR[20] + 1;
-		if(VAR[20] > 3)
-			VAR[20] = 0;
+		VAR[22] = VAR[22] + 1;
 	}
 
 	if(VAR[20] == 0)
@@ -55,7 +117,7 @@ void moveSuicune()
 	}
 	else if(VAR[20] == 1)
 	{
-		LZ77UnCompVram(&suicune2Tiles, &OBJData[0x200]);
+		LZ77UnCompVram(&suicune4Tiles, &OBJData[0x200]);
 	}
 	else if(VAR[20] == 2)
 	{
@@ -63,7 +125,7 @@ void moveSuicune()
 	}
 	else if(VAR[20] == 3)
 	{
-		LZ77UnCompVram(&suicune4Tiles, &OBJData[0x200]);
+		LZ77UnCompVram(&suicune2Tiles, &OBJData[0x200]);
 	}
 }
 
