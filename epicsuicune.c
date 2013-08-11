@@ -19,7 +19,9 @@ void scrollEpicBackground()
 	changeIO(0x12,VAR[17]);
 	changeIO(0x14,VAR[18]);
 
-	
+	if(OAM_Mem[0] > 0x30)
+		OAM_Mem[0] = OAM_Mem[0] - 1;
+
 	
 	if(init[27] == 7)
 	{
@@ -73,10 +75,66 @@ void shiftUnown(int i)
 
 void showEduck()
 {
-		for(int i = 0; i < 8; i++)
-		{
-			OAM_Mem[i+4] = sunownduckOAM[i];
-		}
+	for(int i = 0; i < 8; i++)
+	{
+		OAM_Mem[i+4] = sunownduckOAM[i];
+	}
+}
+
+void showEe()
+{
+	for(int i = 0; i < 8; i++)
+	{
+		OAM_Mem[i+8] = sunownEOAM[i];
+	}
+}
+
+void showEs()
+{
+	for(int i = 0; i < 8; i++)
+	{
+		OAM_Mem[i+12] = sunownSOAM[i];
+	}
+}
+
+void showEt()
+{
+	for(int i = 0; i < 8; i++)
+	{
+		OAM_Mem[i+16] = sunownTOAM[i];
+	}
+}
+
+void showEh2()
+{
+	for(int i = 0; i < 8; i++)
+	{
+		OAM_Mem[i+20] = sunownH2OAM[i];
+	}
+}
+
+void showEu()
+{
+	for(int i = 0; i < 8; i++)
+	{
+		OAM_Mem[i+24] = sunownUOAM[i];
+	}
+}
+
+void showEg()
+{
+	for(int i = 0; i < 8; i++)
+	{
+		OAM_Mem[i+28] = sunownGOAM[i];
+	}
+}
+
+void showEs2()
+{
+	for(int i = 0; i < 8; i++)
+	{
+		OAM_Mem[i+32] = sunownS2OAM[i];
+	}
 }
 
 void loadEpicGFX()
@@ -128,34 +186,6 @@ void loadEpicGFX()
 			OAM_Mem[i] = epicsuicune2OAM[i];
 		}
 
-		for(int i = 0; i < 8; i++)
-		{
-			OAM_Mem[i+8] = sunownEOAM[i];
-		}
-		for(int i = 0; i < 8; i++)
-		{
-			OAM_Mem[i+12] = sunownSOAM[i];
-		}
-		for(int i = 0; i < 8; i++)
-		{
-			OAM_Mem[i+16] = sunownTOAM[i];
-		}
-		for(int i = 0; i < 8; i++)
-		{
-			OAM_Mem[i+20] = sunownH2OAM[i];
-		}
-		for(int i = 0; i < 8; i++)
-		{
-			OAM_Mem[i+24] = sunownUOAM[i];
-		}
-		for(int i = 0; i < 8; i++)
-		{
-			OAM_Mem[i+28] = sunownGOAM[i];
-		}
-		for(int i = 0; i < 8; i++)
-		{
-			OAM_Mem[i+32] = sunownS2OAM[i];
-		}
 	}
 
 	init[0] = init[0] + 1;

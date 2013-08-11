@@ -24,6 +24,22 @@ void fadeScreenFast()
 	int x = func();
 }
 
+void unfadeScreenWhite()
+{
+	__asm("mov r0, #0x2");
+	__asm("mov r1, #0x0");
+	int (*func)(void) = (int (*)(void))0x0807A819;
+	int x = func();
+}
+
+void fadeScreenWhite()
+{
+	__asm("mov r0, #0x3");
+	__asm("mov r1, #0x0");
+	int (*func)(void) = (int (*)(void))0x0807A819;
+	int x = func();
+}
+
 void fadeSong()
 {
 	__asm("mov r0, #0x4");

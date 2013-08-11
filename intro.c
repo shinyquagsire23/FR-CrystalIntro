@@ -334,10 +334,92 @@ void notMain()
 	}
 	else if(init[27] == 9)
 	{
-		scrollEpicBackground();
+		if(TIMER[0] < 60)
+		{
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 68)
+		{
+			scrollEpicBackground();
+			showEduck();
+		}
+		else if(TIMER[0] < 76)
+		{
+			scrollEpicBackground();
+			showEe();
+		}
+		else if(TIMER[0] < 84)
+		{
+			scrollEpicBackground();
+			showEs();
+		}
+		else if(TIMER[0] < 92)
+		{
+			scrollEpicBackground();
+			showEt();
+		}
+		else if(TIMER[0] < 100)
+		{
+			scrollEpicBackground();
+			showEh2();
+		}
+		else if(TIMER[0] < 108)
+		{
+			scrollEpicBackground();
+			showEu();
+		}
+		else if(TIMER[0] < 116)
+		{
+			scrollEpicBackground();
+			showEg();
+		}
+		else if(TIMER[0] < 124)
+		{
+			scrollEpicBackground();
+			showEs2();
+		}
+		else if(TIMER[0] < 200)
+		{
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 201)
+		{
+			scrollEpicBackground();
+			fadeScreenWhite();
+		}
+		else if(TIMER[0] < 220)
+		{
+			scrollEpicBackground();
+		}
+		else if(TIMER[0] < 221)
+		{
+			init[27] = 10;
+			init[0] = 0;
+			TIMER[0] = 0;
+		}
 	}
-
-	if(keyDown(KEY_A))
+	else if(init[27] == 10)
+	{
+		if(TIMER[0] < 20)
+		{
+			initCrystal();
+		}
+		else if(TIMER[0] < 210)
+		{
+			loadText();
+		}
+		else if(TIMER[0] < 211)
+		{
+			fadeScreenWhite();
+		}
+		else if(TIMER[0] > 240)
+		{
+			init[27] = 11;
+			init[0] = 0;
+			TIMER[0] = 0;
+		}
+	}
+	if(keyDown(KEY_A) || init[27] == 11)
 	{
 		int (*func)(void) = (int (*)(void))0x0800CC7B;
 		resetVars();
@@ -352,5 +434,6 @@ void notMain()
 #include "unown.c"
 #include "trees.c"
 #include "epicsuicune.c"
+#include "crystal.c"
 #include "useful.h"
 

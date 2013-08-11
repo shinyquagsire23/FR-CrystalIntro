@@ -289,7 +289,7 @@ const unsigned short epicsuicuneOAM[16] __attribute__((aligned(4)))=
 
 const unsigned short epicsuicune2OAM[16] __attribute__((aligned(4)))=
 {
-	0x0030,0xC05C,0x1480,0x0,
+	0x0050,0xC05C,0x1480,0x0,
 };
 
 const unsigned short suicunemug1Tiles[946] __attribute__((aligned(4)))=
