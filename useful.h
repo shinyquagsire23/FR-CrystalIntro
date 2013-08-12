@@ -2,28 +2,25 @@
 
 void unfadeScreen()
 {
-	__asm("mov r0, #0x0");
-	__asm("mov r1, #0x0");
-	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
+	//__asm("mov r0, #0x0");
+	//__asm("mov r1, #0x0");
+	//int (*func)(void) = (int (*)(void))0x0807A819;
+	//int x = func();
+	fadeScreen2(0,0x10,0);
 }
 
 void fadeScreen()
 {
 	__asm("mov r0, #0x1");
-	__asm("mov r1, #0x0");
-	__asm("str r1, [SP,#0xC]");
 	__asm("mov r1, #0x4");
-	__asm("mov r2, #0x0");
-	__asm("mov r3, #0x10");
-	int (*func)(void) = (int (*)(void))0x08070589;
+	int (*func)(void) = (int (*)(void))0x0807A819;
 	int x = func();
 }
 
-void fadeScreen2(int a, int b, int c, int d, int e, int f, int g)
+void fadeScreen2(int nub, int r2, int r3)
 {
-	int (*func)(void) = (int (*)(void))0x08070589;
-	int x = func();
+	int (*func)(void) = (int (*)(void))0x08790025;
+	func();
 }
 
 void fadeScreenFast()
@@ -122,10 +119,10 @@ void clearOAM()
 
 void resetVars()
 {
-		VAR[0] = 0;
-		VAR[1] = 0;
-		VAR[2] = 0;
-		VAR[3] = 0;
-		TIMER[0] = 0;
-		TIMER[1] = 0;
+	TIMER[0] = 0;
+	TIMER[1] = 0;
+	for(int i = 0; i < 90; i++)
+	{
+		VAR[i] = 0;
+	}
 }

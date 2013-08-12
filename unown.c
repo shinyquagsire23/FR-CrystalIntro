@@ -80,15 +80,21 @@ void showDuck()
 	if(init[0] == 0)
 	{
 		loadHugsGFX();
-		unfadeScreen();
+		fadeScreen2(0,0x10,0);
 		playSound(57);
+		unfadeScreen();
 	}
-	//unfadeScreen();
+	//
 }
 
 void showE()
 {
 	clearOAM();
+	if(init[0] == 1)
+	{
+		//unfadeScreen();
+		init[0] = 0;
+	}
 	for(int i = 0; i < 8; i++)
 	{
 		OAM_Mem[i+4] = unownEOAM[i];
@@ -98,6 +104,11 @@ void showE()
 void showS()
 {
 	clearOAM();
+	if(init[0] == 0)
+	{
+		//fadeScreen2(0,0x10,0);
+		init[0] = 1;
+	}
 	for(int i = 0; i < 8; i++)
 	{
 		OAM_Mem[i+8] = unownSOAM[i];
@@ -107,6 +118,11 @@ void showS()
 void showT()
 {
 	clearOAM();
+	if(init[0] == 1)
+	{
+		//fadeScreen2(0,0x10,0);
+		init[0] = 0;
+	}
 	for(int i = 0; i < 8; i++)
 	{
 		OAM_Mem[i+12] = unownTOAM[i];
@@ -116,6 +132,7 @@ void showT()
 void showH()
 {
 	clearOAM();
+	//fadeScreen2(0,0x10,0);
 	for(int i = 0; i < 8; i++)
 	{
 		OAM_Mem[i+16] = unownH2OAM[i];
@@ -125,6 +142,7 @@ void showH()
 void showU()
 {
 	clearOAM();
+	//unfadeScreen();
 	for(int i = 0; i < 8; i++)
 	{
 		OAM_Mem[i+20] = unownUOAM[i];
@@ -134,6 +152,7 @@ void showU()
 void showG()
 {
 	clearOAM();
+	//unfadeScreen();
 	for(int i = 0; i < 8; i++)
 	{
 		OAM_Mem[i+24] = unownGOAM[i];
@@ -143,6 +162,7 @@ void showG()
 void showS2()
 {
 	clearOAM();
+	//unfadeScreen();
 	for(int i = 0; i < 8; i++)
 	{
 		OAM_Mem[i+28] = unownS2OAM[i];

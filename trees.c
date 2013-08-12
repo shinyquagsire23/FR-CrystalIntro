@@ -194,6 +194,7 @@ void loadTreeGFX()
 	WIN0V = 0x0C96;//0xFF;
 	WIN1V = 0xFFFF;
 	WININ = 0x1F1F;
+	WINOUT = 0x0;
 	BLDMOD = 0x1F40;
 	clearOAM();
 	copyPal(&trees_bg0_nightPal, &BG_PaletteMem[0]);

@@ -1,7 +1,7 @@
 #include "img_bins/crystal/unown.h"
 
 #define unownBuffer     ((u16*)0x02037108)
-#define numCharsinWord 11
+#define numCharsinWord 7
 //#define unownBuffer     ((u16*)0x03003128)
 
 void initCrystal()

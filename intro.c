@@ -35,7 +35,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 344)
 		{
-			fadeScreen2(0xFFFFFFFF,4,0,0x10,0,0,0);
+			fadeScreen2(0,0,0x10);
 			fadeSong();
 		}
 		else if(TIMER[0] < 500){}
@@ -162,7 +162,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 151)
 		{
-			playSound(63);
+			playSound(10);
 		}
 		else if(TIMER[0] < 180)
 		{
@@ -171,7 +171,7 @@ void notMain()
 		else if(TIMER[0] < 190){}
 		else if(TIMER[0] < 191)
 		{
-			playSound(63);
+			playSound(10);
 		}
 		else if(TIMER[0] < 220)
 		{
@@ -201,7 +201,6 @@ void notMain()
 	else if(init[27] == 5)
 	{
 		//BEST HUGS (evar!)
-		//un3Test();
 		if(TIMER[0] < 30)
 		{
 			showDuck();
@@ -218,6 +217,7 @@ void notMain()
 		{
 			playSound(55);
 		}
+		else if(TIMER[0] < 70){}
 		else if(TIMER[0] < 90)
 		{
 			showS();
@@ -226,6 +226,7 @@ void notMain()
 		{
 			playSound(56);
 		}
+		else if(TIMER[0] < 100){}
 		else if(TIMER[0] < 120)
 		{
 			showT();
@@ -235,6 +236,7 @@ void notMain()
 		{
 			playSound(57);
 		}
+		else if(TIMER[0] < 125){}
 		else if(TIMER[0] < 135)
 		{
 			showH();
@@ -243,6 +245,7 @@ void notMain()
 		{
 			playSound(56);
 		}
+		else if(TIMER[0] < 140){}
 		else if(TIMER[0] < 150)
 		{
 			showU();
@@ -251,6 +254,7 @@ void notMain()
 		{
 			playSound(55);
 		}
+		else if(TIMER[0] < 155){}
 		else if(TIMER[0] < 165)
 		{
 			showG();
@@ -259,6 +263,7 @@ void notMain()
 		{
 			playSound(56);
 		}
+		else if(TIMER[0] < 170){}
 		else if(TIMER[0] < 180)
 		{
 			showS2();
@@ -356,20 +361,20 @@ void notMain()
 	}
 	else if(init[27] == 8)
 	{
-		if(TIMER[0] < 168)
+		if(TIMER[0] < 138)
 		{
 			scrollEpicBackground();
 		}
-		else if(TIMER[0] < 169)
+		else if(TIMER[0] < 139)
 		{
 			scrollEpicBackground();
 			fadeScreenFast();
 		}
-		if(TIMER[0] < 200)
+		if(TIMER[0] < 170)
 		{
 			scrollEpicBackground();
 		}
-		else if(TIMER[0] < 201)
+		else if(TIMER[0] < 171)
 		{
 			init[27] = 9;
 			init[0] = 0;
@@ -431,11 +436,11 @@ void notMain()
 			scrollEpicBackground();
 			fadeScreenWhite();
 		}
-		else if(TIMER[0] < 220)
+		else if(TIMER[0] < 260)
 		{
 			scrollEpicBackground();
 		}
-		else if(TIMER[0] < 221)
+		else if(TIMER[0] < 261)
 		{
 			init[27] = 10;
 			init[0] = 0;
@@ -464,9 +469,9 @@ void notMain()
 		}
 	}
 	if(keyDown(KEY_A) || init[27] == 11)
-	{
-		int (*func)(void) = (int (*)(void))0x0800CC7B;
-		resetVars();
+   	{
+     		int (*func)(void) = (int (*)(void))0x0800CC6B;
+     		resetVars();
 		int x = func();
 	}
 	return;
