@@ -35,7 +35,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 344)
 		{
-			fadeScreen();
+			fadeScreen2(0xFFFFFFFF,4,0,0x10,0,0,0);
 			fadeSong();
 		}
 		else if(TIMER[0] < 500){}

@@ -11,8 +11,18 @@ void unfadeScreen()
 void fadeScreen()
 {
 	__asm("mov r0, #0x1");
+	__asm("mov r1, #0x0");
+	__asm("str r1, [SP,#0xC]");
 	__asm("mov r1, #0x4");
-	int (*func)(void) = (int (*)(void))0x0807A819;
+	__asm("mov r2, #0x0");
+	__asm("mov r3, #0x10");
+	int (*func)(void) = (int (*)(void))0x08070589;
+	int x = func();
+}
+
+void fadeScreen2(int a, int b, int c, int d, int e, int f, int g)
+{
+	int (*func)(void) = (int (*)(void))0x08070589;
 	int x = func();
 }
 

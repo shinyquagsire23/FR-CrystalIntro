@@ -27,6 +27,7 @@ void treeDashing()
 	if(init[0] == 1)
 	{
 		loadTreeGFX();
+		playSong(277);
 		changeIO(0x10,0x1FF);
 		changeIO(0x14,0x1FF);
 		changeIO(0x18,0x1FF);
