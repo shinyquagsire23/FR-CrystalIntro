@@ -1,6 +1,7 @@
 #include "img_bins/epic/background.h"
 #include "img_bins/epic/suicune.h"
 #include "img_bins/epic/unown.h"
+#define enableSuicuneMugAnim 0
 
 void scrollEpicBackground()
 {
@@ -35,7 +36,7 @@ void scrollEpicBackground()
 		else
 			LZ77UnCompVram(&epicsuicune1Tiles, &OBJData[0]);
 	}
-	else if(init[27] == 8)
+	else if(init[27] == 8 && enableSuicuneMugAnim)
 	{
 		if(VAR[19] < 20)
 			VAR[19] = VAR[19] + 1;
