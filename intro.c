@@ -55,6 +55,10 @@ void notMain()
 		{
 			unflashA();	
 		}
+		else if(TIMER[0] < 61)
+		{
+			playSound(55);
+		}
 		else if(TIMER[0] < 90)
 		{
 			flashA();	
@@ -93,7 +97,7 @@ void notMain()
 		}
 	}
 	else if(init[27] == 3)
-	{
+	{		
 		if(TIMER[0] < 30)
 		{
 			flashI();
@@ -124,6 +128,10 @@ void notMain()
 		{
 			treePan();
 		}
+		else if(TIMER[0] < 91)
+		{
+			playSound(17);
+		}
 		else if(TIMER[0] < 120)
 		{
 			moveSuicune();
@@ -152,11 +160,19 @@ void notMain()
 		{
 			unshiftGrass();
 		}
+		else if(TIMER[0] < 151)
+		{
+			playSound(63);
+		}
 		else if(TIMER[0] < 180)
 		{
 			moveWooper();
 		}
 		else if(TIMER[0] < 190){}
+		else if(TIMER[0] < 191)
+		{
+			playSound(63);
+		}
 		else if(TIMER[0] < 220)
 		{
 			movePichu();
@@ -190,30 +206,58 @@ void notMain()
 		{
 			showDuck();
 		}
+		else if(TIMER[0] < 31)
+		{
+			playSound(56);
+		}
 		else if(TIMER[0] < 60)
 		{
 			showE();
 		}
+		else if(TIMER[0] < 61)
+		{
+			playSound(55);
+		}
 		else if(TIMER[0] < 90)
 		{
 			showS();
+		}
+		else if(TIMER[0] < 91)
+		{
+			playSound(56);
 		}
 		else if(TIMER[0] < 120)
 		{
 			showT();
 		}
 
+		else if(TIMER[0] < 121)
+		{
+			playSound(57);
+		}
 		else if(TIMER[0] < 135)
 		{
 			showH();
+		}
+		else if(TIMER[0] < 136)
+		{
+			playSound(56);
 		}
 		else if(TIMER[0] < 150)
 		{
 			showU();
 		}
+		else if(TIMER[0] < 151)
+		{
+			playSound(55);
+		}
 		else if(TIMER[0] < 165)
 		{
 			showG();
+		}
+		else if(TIMER[0] < 166)
+		{
+			playSound(56);
 		}
 		else if(TIMER[0] < 180)
 		{

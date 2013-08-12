@@ -38,6 +38,7 @@ void flashI()
 	if(init[0] <= 1)
 	{
 		loadIGFX();
+		playSong(56);
 	}
 }
 
@@ -60,6 +61,7 @@ void flashH()
 			OAM_Mem[i+4] = unownHOAM[i];
 		}
 		unfadeScreen();
+		playSound(55);
 		init[0] = 0;
 	}
 }
@@ -79,6 +81,7 @@ void showDuck()
 	{
 		loadHugsGFX();
 		unfadeScreen();
+		playSound(57);
 	}
 	//unfadeScreen();
 }
