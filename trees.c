@@ -213,6 +213,11 @@ void loadTreeGFX()
 	LZ77UnCompVram(&wooperTiles, &OBJData[0x400]);
 	LZ77UnCompVram(&pichu1Tiles, &OBJData[0x800]);
 
+	if(VAR[16] == 1)
+	{
+		copyPal(&wooper2Pal, &OBJ_PaletteMem[16]);
+	}
+
 	for(int i = 0; i < 8; i++)
 	{
 		OAM_Mem[i] = suicuneOAM[i];

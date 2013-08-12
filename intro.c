@@ -59,13 +59,30 @@ void notMain()
 		{
 			playSound(55);
 		}
-		else if(TIMER[0] < 90)
+		else if(TIMER[0] < 70)
 		{
 			flashA();	
 		}
+		else if(TIMER[0] < 75)
+		{
+			APulseInit();
+		}
+		else if(TIMER[0] < 78)
+		{
+			APulse(1);
+		}
+		else if(TIMER[0] < 81)
+		{
+			APulse(2);
+		}
+		else if(TIMER[0] < 90)
+		{
+			APulse(3);
+		}
 		else if(TIMER[0] < 120)
 		{	
-			unflashA();	
+			unflashA();
+			APulse(3);	
 		}
 		else if(TIMER[0] < 121)
 		{
@@ -98,21 +115,59 @@ void notMain()
 	}
 	else if(init[27] == 3)
 	{		
-		if(TIMER[0] < 30)
+		if(TIMER[0] < 10)
 		{
 			flashI();
+		}
+		else if(TIMER[0] < 15)
+		{
+			IPulseInit();
+		}
+		else if(TIMER[0] < 18)
+		{
+			APulse(1);
+		}
+		else if(TIMER[0] < 21)
+		{
+			APulse(2);
+		}
+		else if(TIMER[0] < 30)
+		{
+			APulse(3);
+		}
+		else if(TIMER[0] < 31)
+		{
+			blackPulse();
 		}
 		else if(TIMER[0] < 60)
 		{
 			unflashI();
 		}
-		else if(TIMER[0] < 90)
+		else if(TIMER[0] < 80)
 		{
 			flashH();
+		}
+		else if(TIMER[0] < 85)
+		{
+			APulse(0);
+			HPulseInit();
+		}
+		else if(TIMER[0] < 88)
+		{
+			APulse(1);
+		}
+		else if(TIMER[0] < 91)
+		{
+			APulse(2);
+		}
+		else if(TIMER[0] < 100)
+		{
+			APulse(3);
 		}
 		else if(TIMER[0] < 120)
 		{
 			unflashH();
+			blackPulse();
 		}
 		else if(TIMER[0] < 180){}
 		else if(TIMER[0] < 181)
@@ -468,7 +523,7 @@ void notMain()
 			TIMER[0] = 0;
 		}
 	}
-	if(keyDown(KEY_A) || init[27] == 11)
+	if(keyDown(KEY_A) || keyDown(KEY_B) || keyDown(KEY_START) || keyDown(KEY_SELECT) ||init[27] == 11)
    	{
      		int (*func)(void) = (int (*)(void))0x0800CC6B;
      		resetVars();

@@ -106,7 +106,7 @@ void initGFX()
 	LZ77UnCompVram(&walk1Tiles, &OBJData[0]);
 	LZ77UnCompVram(&walk2Tiles, &OBJData[0x200]);
 	
-	if(keyDown(KEY_SELECT))
+	if(keyDown(KEY_R))
 	{
 		VAR[16] = 1;
 		copyPal(&quagNormalPal, &OBJ_PaletteMem[0]);
