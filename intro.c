@@ -217,7 +217,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 151)
 		{
-			playSound(10);
+			playSound(63);
 		}
 		else if(TIMER[0] < 180)
 		{
@@ -226,7 +226,7 @@ void notMain()
 		else if(TIMER[0] < 190){}
 		else if(TIMER[0] < 191)
 		{
-			playSound(10);
+			playSound(63);
 		}
 		else if(TIMER[0] < 220)
 		{
