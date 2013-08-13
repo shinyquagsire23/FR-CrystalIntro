@@ -1,5 +1,6 @@
 #define TITLE     ((u8*)0x020370B7)
 #define VAR     ((u8*)0x020370B8)
+#define MOS     ((u8*)0x0400001C)
 #define TIMER   ((long*)0x020370BC)
 #define init     ((u8*)0x020370B8)
 
@@ -17,32 +18,87 @@ void notMain()
 	TIMER[0] = TIMER[0] + 1;
 	if(init[27] == 0)
 	{
-		if(TIMER[0] < 211)
+		if(TIMER[0] < 10)
 		{
-			quagStrut();
+			initDitto();
 		}
-		else if(TIMER[0] < 263)
-		{	
-			quagWalkDown();
-		}	
-		else if	(TIMER[0] < 303)
+		else if(TIMER[0] < 17)
 		{
-			quagShout();
+			moveDitto();
 		}
-		else if(TIMER[0] < 343)
+		else if(TIMER[0] < 24)
 		{
-			quagSparkle();
+			shiftDitto(1);
+			moveDitto();
 		}
-		else if(TIMER[0] < 344)
+		else if(TIMER[0] < 28)
 		{
-			fadeScreen2(0,0,0x10);
-			fadeSong();
+			shiftDitto(2);
 		}
-		else if(TIMER[0] < 500){}
-		else if(TIMER[0] < 530)
+		else if(TIMER[0] < 35)
+		{
+			shiftDitto(1);
+			moveDittoUp();
+		}
+		else if(TIMER[0] < 37)
+		{
+			shiftDitto(0);
+			moveDittoUp();
+		}
+		else if(TIMER[0] < 39)
+		{
+			moveDitto();
+		}
+		else if(TIMER[0] < 43)
+		{
+			shiftDitto(1);
+			moveDitto();
+		}
+		else if(TIMER[0] < 47)
+		{
+			shiftDitto(2);
+		}
+		else if(TIMER[0] < 52)
+		{
+			shiftDitto(3);
+		}
+		else if(TIMER[0] < 70){}
+		else if(TIMER[0] < 85)
+		{
+			dittoMosiac(1);
+		}
+		else if(TIMER[0] < 80)
+		{
+			transform();
+			dittoMosiac(0);
+		}
+		else if(TIMER[0] < 95)
+		{
+			transform();
+			dittoMosiac(0);
+		}
+		else if(TIMER[0] < 150){}
+		else if(TIMER[0] < 160)
+		{
+			//Sound
+			loadGameFreak();
+		}
+		else if(TIMER[0] < 210){}
+		else if(TIMER[0] < 220)
+		{
+			loadPresents();
+		}
+		else if(TIMER[0] < 280){}
+		else if(TIMER[0] < 281)
+		{
+			fadeScreenFast();
+		}
+		else if(TIMER[0] < 380){}
+		else if(TIMER[0] < 381)
 		{
 			init[27] = 1;
 			TIMER[0] = 0;
+			init[0] = 6;
 		}
 	}	
 	else if(init[27] == 1)
@@ -534,7 +590,7 @@ void notMain()
 
 #include <string.h>
 #include "include/gba.h"
-#include "companylogo.c"
+#include "diegologo.c"
 #include "unown.c"
 #include "trees.c"
 #include "epicsuicune.c"
