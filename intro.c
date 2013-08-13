@@ -1,6 +1,4 @@
-#define TITLE     ((u8*)0x020370B7)
 #define VAR     ((u8*)0x020370B8)
-#define MOS     ((u8*)0x0400001C)
 #define TIMER   ((long*)0x020370BC)
 #define init     ((u8*)0x020370B8)
 
@@ -16,6 +14,9 @@
 void notMain()
 {
 	TIMER[0] = TIMER[0] + 1;
+	faith();
+	trust();
+	pixieDust();
 	if(init[27] == 0)
 	{
 		if(TIMER[0] < 10)
@@ -629,7 +630,7 @@ void notMain()
 	}
 	if(keyDown(KEY_A) || keyDown(KEY_B) || keyDown(KEY_START) || keyDown(KEY_SELECT) ||init[27] == 11)
    	{
-     		int (*func)(void) = (int (*)(void))0x0800CC6B;
+     		int (*func)(void) = (int (*)(void))0x080186A5;
      		resetVars();
 		int x = func();
 	}

@@ -9,19 +9,21 @@ main:
 push {r0-r7, lr}
 bl main_func
 returnmain:
-bl call_back3
 bl sub_080704D0
 pop {r0-r7}
-ldr r0, returnloc
+pop {r4}
+pop {r0}
 bx r0
 
 call_back3:
-ldr r4, callback3_address
-bx r4
+@ldr r4, callback3_address
+bx lr
 
 sub_080704D0:
-ldr r4, loc_080704D0
-bx r4
+ldr r4, loc_030022c0
+mov r0, #0xFF
+strb r0, [r4]
+bx lr
 
 main_func:
 push {lr}
@@ -48,10 +50,11 @@ b returnfade
 
 .align 2
 callback3_address:		.word 0x08077578+1
-loc_080704D0:			.word 0x080704D0+1
+loc_030022c0:			.word 0x030022c0
 sub_0800CC7A:			.word 0x0800CC7A+1
 returnloc:			.word 0x0800053a+1
-fadescreen:			.word 0x08070588+1
-white:				.hword 0xFF7F
+fadescreen:			.word 0x080A1AD4+1
+white:				.byte 0x7f 
+				.byte 0xFF
 
 C_hook:

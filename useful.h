@@ -1,3 +1,18 @@
+void faith()
+{
+
+}
+
+void trust()
+{
+
+}
+
+void pixieDust()
+{
+	int (*func)(void) = (int (*)(void))0x080a1a1d;
+	func();
+}
 
 void unfadeScreen()
 {
@@ -11,7 +26,7 @@ void fadeScreen()
 
 void fadeScreen2(int white, int r2, int r3)
 {
-	int (*func)(void) = (int (*)(void))0x08790025;
+	int (*func)(void) = (int (*)(void))0x089E0025;
 	func();
 }
 
@@ -33,7 +48,7 @@ void fadeScreenWhite()
 void fadeSong()
 {
 	__asm("mov r0, #0x4");
-	int (*func)(void) = (int (*)(void))0x0806b155;
+	int (*func)(void) = (int (*)(void))0x080A3241;
 	int x = func();
 }
 
@@ -41,6 +56,8 @@ void copyPal(void *source, void *dest)
 {
 	__asm("mov r2, #0x8");
 	SystemCall(0xC);
+	//int (*func)(void) = (int (*)(void))0x080087BD;
+	//func();
 }
 
 void copyMem(void *source, void *dest, void *size)
@@ -51,31 +68,31 @@ void copyMem(void *source, void *dest, void *size)
 
 void playSong(int *songNum)
 {
-	int (*func)(void) = (int (*)(void))0x081DD0F5;
+	int (*func)(void) = (int (*)(void))0x082E0131;
 	int x = func();
 }
 
 void playCry(int *pkmnNum, int *fx)
 {
-	int (*func)(void) = (int (*)(void))0x08071dF1;
+	int (*func)(void) = (int (*)(void))0x080A3275;
 	int x = func();
 }
 
 void playSound(int *fxNum)
 {
-	int (*func)(void) = (int (*)(void))0x080722CD;
+	int (*func)(void) = (int (*)(void))0x080A37A5;
 	int x = func();
 }
 
 void changeIO(int *a, int *b)
 {
-	int (*func)(void) = (int (*)(void))0x08000A39;
+	int (*func)(void) = (int (*)(void))0x080010B5;
 	int i = func();
 }
 
 void clearOAM()
 {
-	int (*func)(void) = (int (*)(void))0x08006B11;
+	int (*func)(void) = (int (*)(void))0x08006975;
 	int i = func();
 }
 
