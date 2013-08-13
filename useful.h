@@ -1,5 +1,4 @@
 
-
 void unfadeScreen()
 {
 	fadeScreen2(0,0x10,0);
@@ -68,30 +67,9 @@ void playSound(int *fxNum)
 	int x = func();
 }
 
-void drawText(int *foo, int *font, int *x, int *y, int *bar, int *baz, long *str)
-{
-	//__asm("str r4, [SP,#0xBC]");
-	//__asm("str r5, [SP,#0xBC+4]");
-	//__asm("str r6, [SP,#0xBC+8]");
-	int (*func)(void) = (int (*)(void))0x0812E51D;
-	int i = func();
-}
-
 void changeIO(int *a, int *b)
 {
 	int (*func)(void) = (int (*)(void))0x08000A39;
-	int i = func();
-}
-
-void something2(int *a, int *b, int *c)
-{
-	int (*func)(void) = (int (*)(void))0x08001B91;
-	int i = func();
-}
-
-void something(int *a, int *b, int *c)
-{
-	int (*func)(void) = (int (*)(void))0x080F6F1D;
 	int i = func();
 }
 
@@ -110,3 +88,4 @@ void resetVars()
 		VAR[i] = 0;
 	}
 }
+
