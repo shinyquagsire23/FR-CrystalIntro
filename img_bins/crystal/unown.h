@@ -95,6 +95,6 @@ const unsigned short whitePal[16] __attribute__((aligned(4)))=
 const unsigned short unownWord[11] =
 {
 	//16,15,15,8,5,1,4, //POOHEAD
-	3,18,25,19,20,1,12, //CRYSTAL
-	//3,18,25,19,20,1,12,4,21,19,20, //CRYSTALDUST
+	//3,18,25,19,20,1,12, //CRYSTAL
+	3,18,25,19,20,1,12,4,21,19,20, //CRYSTALDUST
 };

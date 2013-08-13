@@ -25,6 +25,20 @@ void moveDittoUp()
 		OAM_Mem[0] = 0x10FF;
 }
 
+void moveDittoNum(int i)
+{
+	OAM_Mem[0] = OAM_Mem[0] + i;
+	if(OAM_Mem[0] > 0xFF && OAM_Mem[0] >> 8 != 0x10)
+		OAM_Mem[0] = 0x1000;
+}
+
+void moveDittoUpNum(int i)
+{
+	OAM_Mem[0] = OAM_Mem[0] - i;
+	if(OAM_Mem[0] > 0xFF && OAM_Mem[0] >> 8 != 0x10)
+		OAM_Mem[0] = 0x10FF;
+}
+
 void dittoMosiac(int i)
 {
 	if(i == 1)
@@ -85,7 +99,7 @@ void loadDittoGFX()
 	BG0CNT = 0x0702;
 	WIN0H = 0xFF;
 	WIN1H = 0xFFFF;
-	WIN0V = 0x78; //0xFF
+	WIN0V = 0x67; //0xFF
 	WIN1V = 0xFFFF;
 	WININ = 0x1F1F;
 	WINOUT = 0x0;

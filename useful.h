@@ -2,22 +2,15 @@
 
 void unfadeScreen()
 {
-	//__asm("mov r0, #0x0");
-	//__asm("mov r1, #0x0");
-	//int (*func)(void) = (int (*)(void))0x0807A819;
-	//int x = func();
 	fadeScreen2(0,0x10,0);
 }
 
 void fadeScreen()
 {
-	__asm("mov r0, #0x1");
-	__asm("mov r1, #0x4");
-	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
+	fadeScreen2(4,0,0x10);
 }
 
-void fadeScreen2(int nub, int r2, int r3)
+void fadeScreen2(int white, int r2, int r3)
 {
 	int (*func)(void) = (int (*)(void))0x08790025;
 	func();
@@ -25,26 +18,17 @@ void fadeScreen2(int nub, int r2, int r3)
 
 void fadeScreenFast()
 {
-	__asm("mov r0, #0x1");
-	__asm("mov r1, #0x0");
-	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
+	fadeScreen2(0,0,0x10);
 }
 
 void unfadeScreenWhite()
 {
-	__asm("mov r0, #0x2");
-	__asm("mov r1, #0x0");
-	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
+	fadeScreen2(1,0x10,0);
 }
 
 void fadeScreenWhite()
 {
-	__asm("mov r0, #0x3");
-	__asm("mov r1, #0x0");
-	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
+	fadeScreen2(1,0,0x10);
 }
 
 void fadeSong()

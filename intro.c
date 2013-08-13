@@ -35,66 +35,114 @@ void notMain()
 		{
 			shiftDitto(2);
 		}
-		else if(TIMER[0] < 35)
+		else if(TIMER[0] < 40)
 		{
 			shiftDitto(1);
-			moveDittoUp();
-		}
-		else if(TIMER[0] < 37)
-		{
-			shiftDitto(0);
 			moveDittoUp();
 		}
 		else if(TIMER[0] < 39)
 		{
-			moveDitto();
+			//shiftDitto(0);
+			moveDittoUp();
 		}
-		else if(TIMER[0] < 43)
+		else if(TIMER[0] < 40)
+		{
+			moveDittoUpNum(5);
+		}
+		else if(TIMER[0] < 41)
+		{
+			moveDittoUpNum(4);
+		}
+		else if(TIMER[0] < 42)
+		{
+			moveDittoUpNum(3);
+		}
+		else if(TIMER[0] < 44)
 		{
 			shiftDitto(1);
-			moveDitto();
+			moveDittoUpNum(2);
 		}
-		else if(TIMER[0] < 47)
+		else if(TIMER[0] < 46)
 		{
-			shiftDitto(2);
+			moveDittoUpNum(1);
+		}
+		else if(TIMER[0] < 50){}
+		else if(TIMER[0] < 51)
+		{
+			moveDittoNum(1);
 		}
 		else if(TIMER[0] < 52)
 		{
+			//shiftDitto(0);
+			moveDittoNum(2);
+		}
+		else if(TIMER[0] < 53)
+		{
+			moveDittoNum(3);
+		}
+		else if(TIMER[0] < 54)
+		{
+			moveDittoNum(4);
+		}
+		else if(TIMER[0] < 55)
+		{
+			moveDittoNum(6);
+		}
+		else if(TIMER[0] < 60)
+		{
+			moveDittoNum(7);
+		}
+		else if(TIMER[0] < 62)
+		{
+			shiftDitto(1);
+			moveDittoNum(7);
+		}
+		else if(TIMER[0] < 68)
+		{
+			shiftDitto(2);
+		}
+		else if(TIMER[0] < 73)
+		{
 			shiftDitto(3);
 		}
-		else if(TIMER[0] < 70){}
-		else if(TIMER[0] < 85)
+		else if(TIMER[0] < 95){}
+		else if(TIMER[0] < 110)
 		{
 			dittoMosiac(1);
 		}
-		else if(TIMER[0] < 80)
+		else if(TIMER[0] < 115)
 		{
 			transform();
 			dittoMosiac(0);
 		}
-		else if(TIMER[0] < 95)
+		else if(TIMER[0] < 130)
 		{
 			transform();
 			dittoMosiac(0);
 		}
-		else if(TIMER[0] < 150){}
-		else if(TIMER[0] < 160)
+		else if(TIMER[0] < 135){}
+		else if(TIMER[0] < 136)
+		{
+			playCry(252);
+		}
+		else if(TIMER[0] < 165){}
+		else if(TIMER[0] < 175)
 		{
 			//Sound
 			loadGameFreak();
 		}
-		else if(TIMER[0] < 210){}
-		else if(TIMER[0] < 220)
+		else if(TIMER[0] < 205){}
+		else if(TIMER[0] < 215)
 		{
 			loadPresents();
 		}
-		else if(TIMER[0] < 280){}
-		else if(TIMER[0] < 281)
+		else if(TIMER[0] < 290){}
+		else if(TIMER[0] < 291)
 		{
 			fadeScreenFast();
 		}
-		else if(TIMER[0] < 380){}
-		else if(TIMER[0] < 381)
+		else if(TIMER[0] < 400){}
+		else if(TIMER[0] < 401)
 		{
 			init[27] = 1;
 			TIMER[0] = 0;
@@ -273,7 +321,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 151)
 		{
-			playSound(63);
+			playSound(0x1C);
 		}
 		else if(TIMER[0] < 180)
 		{
@@ -282,7 +330,7 @@ void notMain()
 		else if(TIMER[0] < 190){}
 		else if(TIMER[0] < 191)
 		{
-			playSound(63);
+			playSound(0x1C);
 		}
 		else if(TIMER[0] < 220)
 		{

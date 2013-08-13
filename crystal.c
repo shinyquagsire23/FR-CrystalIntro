@@ -1,7 +1,7 @@
 #include "img_bins/crystal/unown.h"
 
 #define unownBuffer     ((u16*)0x02037108)
-#define numCharsinWord 7
+#define numCharsinWord 11
 //#define unownBuffer     ((u16*)0x03003128)
 
 void initCrystal()
@@ -15,17 +15,17 @@ void initCrystal()
 
 void loadText()
 {
-	if(VAR[19] < 20)
+	if(VAR[19] < 10)
 		VAR[19] = VAR[19] + 1;
 	else
 		VAR[19] = 0;
 
-	if(VAR[19] >= 10 && init[30] == 1 && init[28] < numCharsinWord)
+	if(VAR[19] >= 5 && init[30] == 1 && init[28] < numCharsinWord)
 	{
 		init[30] = 0;
 		loadNextLetter();
 	}
-	else if(VAR[19] < 10)
+	else if(VAR[19] < 5)
 	{
 		init[30] = 1;
 	}
