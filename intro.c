@@ -162,7 +162,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 61)
 		{
-			playSound(55);
+			playSound(62);
 		}
 		else if(TIMER[0] < 70)
 		{
@@ -322,7 +322,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 151)
 		{
-			playSound(0x1C);
+			playSound(34);
 		}
 		else if(TIMER[0] < 180)
 		{
@@ -331,7 +331,7 @@ void notMain()
 		else if(TIMER[0] < 190){}
 		else if(TIMER[0] < 191)
 		{
-			playSound(0x1C);
+			playSound(34);
 		}
 		else if(TIMER[0] < 220)
 		{
@@ -367,7 +367,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 31)
 		{
-			playSound(56);
+			playSound(63);
 		}
 		else if(TIMER[0] < 60)
 		{
@@ -375,7 +375,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 61)
 		{
-			playSound(55);
+			playSound(62);
 		}
 		else if(TIMER[0] < 70){}
 		else if(TIMER[0] < 90)
@@ -384,7 +384,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 91)
 		{
-			playSound(56);
+			playSound(63);
 		}
 		else if(TIMER[0] < 100){}
 		else if(TIMER[0] < 120)
@@ -394,7 +394,7 @@ void notMain()
 
 		else if(TIMER[0] < 121)
 		{
-			playSound(57);
+			playSound(64);
 		}
 		else if(TIMER[0] < 125){}
 		else if(TIMER[0] < 135)
@@ -403,7 +403,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 136)
 		{
-			playSound(56);
+			playSound(63);
 		}
 		else if(TIMER[0] < 140){}
 		else if(TIMER[0] < 150)
@@ -412,7 +412,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 151)
 		{
-			playSound(55);
+			playSound(62);
 		}
 		else if(TIMER[0] < 155){}
 		else if(TIMER[0] < 165)
@@ -421,7 +421,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 166)
 		{
-			playSound(56);
+			playSound(63);
 		}
 		else if(TIMER[0] < 170){}
 		else if(TIMER[0] < 180)
