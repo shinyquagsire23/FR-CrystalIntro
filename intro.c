@@ -27,9 +27,18 @@ void notMain()
 		{
 			moveDitto();
 		}
-		else if(TIMER[0] < 24)
+		else if(TIMER[0] < 22)
 		{
 			shiftDitto(1);
+			moveDitto();
+		}
+		else if(TIMER[0] < 23)
+		{
+			playSound(49);
+			moveDitto();
+		}
+		else if(TIMER[0] < 24)
+		{
 			moveDitto();
 		}
 		else if(TIMER[0] < 28)
@@ -93,6 +102,12 @@ void notMain()
 		{
 			moveDittoNum(7);
 		}
+		else if(TIMER[0] < 61)
+		{
+			playSound(50);
+			shiftDitto(1);
+			moveDittoNum(7);
+		}
 		else if(TIMER[0] < 62)
 		{
 			shiftDitto(1);
@@ -107,6 +122,11 @@ void notMain()
 			shiftDitto(3);
 		}
 		else if(TIMER[0] < 95){}
+		else if(TIMER[0] < 96)
+		{
+			playSound(51);
+			dittoMosiac(1);
+		}
 		else if(TIMER[0] < 110)
 		{
 			dittoMosiac(1);
@@ -121,12 +141,11 @@ void notMain()
 			transform();
 			dittoMosiac(0);
 		}
-		else if(TIMER[0] < 135){}
-		else if(TIMER[0] < 136)
+		else if(TIMER[0] < 165){}
+		else if(TIMER[0] < 166)
 		{
 			playCry(252);
 		}
-		else if(TIMER[0] < 165){}
 		else if(TIMER[0] < 175)
 		{
 			//Sound
@@ -162,7 +181,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 61)
 		{
-			playSound(62);
+			playSound(257);
 		}
 		else if(TIMER[0] < 70)
 		{
@@ -367,7 +386,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 31)
 		{
-			playSound(63);
+			playSound(258);
 		}
 		else if(TIMER[0] < 60)
 		{
@@ -375,7 +394,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 61)
 		{
-			playSound(62);
+			playSound(257);
 		}
 		else if(TIMER[0] < 70){}
 		else if(TIMER[0] < 90)
@@ -384,7 +403,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 91)
 		{
-			playSound(63);
+			playSound(258);
 		}
 		else if(TIMER[0] < 100){}
 		else if(TIMER[0] < 120)
@@ -394,7 +413,7 @@ void notMain()
 
 		else if(TIMER[0] < 121)
 		{
-			playSound(64);
+			playSound(259);
 		}
 		else if(TIMER[0] < 125){}
 		else if(TIMER[0] < 135)
@@ -403,7 +422,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 136)
 		{
-			playSound(63);
+			playSound(258);
 		}
 		else if(TIMER[0] < 140){}
 		else if(TIMER[0] < 150)
@@ -412,7 +431,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 151)
 		{
-			playSound(62);
+			playSound(257);
 		}
 		else if(TIMER[0] < 155){}
 		else if(TIMER[0] < 165)
@@ -421,7 +440,7 @@ void notMain()
 		}
 		else if(TIMER[0] < 166)
 		{
-			playSound(63);
+			playSound(258);
 		}
 		else if(TIMER[0] < 170){}
 		else if(TIMER[0] < 180)
