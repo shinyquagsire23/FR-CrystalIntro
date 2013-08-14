@@ -2,7 +2,7 @@ OUTPUT_ARCH(arm)
  
 MEMORY {
  
-        rom     : ORIGIN = 0x089E0058, LENGTH = 32M
+        rom     : ORIGIN = 0x089E0024, LENGTH = 32M
         ewram   : ORIGIN = 0x02000000, LENGTH = 4M - 4k
 }
  
