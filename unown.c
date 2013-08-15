@@ -128,6 +128,7 @@ void movePulseA()
 
 void loadAGFX()
 {
+	REG_DISPCNT = 0x7040;
 	clearOAM();
 	copyPal(&unown_aPal, &OBJ_PaletteMem[0]);
 	copyPal(&unownpulsePal, &OBJ_PaletteMem[16]);

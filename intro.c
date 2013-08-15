@@ -17,32 +17,153 @@ void notMain()
 	TIMER[0] = TIMER[0] + 1;
 	if(init[27] == 0)
 	{
-		if(TIMER[0] < 211)
+		if(TIMER[0] < 10)
 		{
-			quagStrut();
+			initDitto();
 		}
-		else if(TIMER[0] < 263)
-		{	
-			quagWalkDown();
-		}	
-		else if	(TIMER[0] < 303)
+		else if(TIMER[0] < 17)
 		{
-			quagShout();
+			moveDitto();
 		}
-		else if(TIMER[0] < 343)
+		else if(TIMER[0] < 22)
 		{
-			quagSparkle();
+			shiftDitto(1);
+			moveDitto();
 		}
-		else if(TIMER[0] < 344)
+		else if(TIMER[0] < 23)
 		{
-			fadeScreen2(0,0,0x10);
-			fadeSong();
+			playSound(43);
+			moveDitto();
 		}
-		else if(TIMER[0] < 500){}
-		else if(TIMER[0] < 530)
+		else if(TIMER[0] < 24)
+		{
+			moveDitto();
+		}
+		else if(TIMER[0] < 28)
+		{
+			shiftDitto(2);
+		}
+		else if(TIMER[0] < 40)
+		{
+			shiftDitto(1);
+			moveDittoUp();
+		}
+		else if(TIMER[0] < 39)
+		{
+			//shiftDitto(0);
+			moveDittoUp();
+		}
+		else if(TIMER[0] < 40)
+		{
+			moveDittoUpNum(5);
+		}
+		else if(TIMER[0] < 41)
+		{
+			moveDittoUpNum(4);
+		}
+		else if(TIMER[0] < 42)
+		{
+			moveDittoUpNum(3);
+		}
+		else if(TIMER[0] < 44)
+		{
+			shiftDitto(1);
+			moveDittoUpNum(2);
+		}
+		else if(TIMER[0] < 46)
+		{
+			moveDittoUpNum(1);
+		}
+		else if(TIMER[0] < 50){}
+		else if(TIMER[0] < 51)
+		{
+			moveDittoNum(1);
+		}
+		else if(TIMER[0] < 52)
+		{
+			//shiftDitto(0);
+			moveDittoNum(2);
+		}
+		else if(TIMER[0] < 53)
+		{
+			moveDittoNum(3);
+		}
+		else if(TIMER[0] < 54)
+		{
+			moveDittoNum(4);
+		}
+		else if(TIMER[0] < 55)
+		{
+			moveDittoNum(6);
+		}
+		else if(TIMER[0] < 60)
+		{
+			moveDittoNum(7);
+		}
+		else if(TIMER[0] < 61)
+		{
+			playSound(44);
+			shiftDitto(1);
+			moveDittoNum(7);
+		}
+		else if(TIMER[0] < 62)
+		{
+			shiftDitto(1);
+			moveDittoNum(7);
+		}
+		else if(TIMER[0] < 68)
+		{
+			shiftDitto(2);
+		}
+		else if(TIMER[0] < 73)
+		{
+			shiftDitto(3);
+		}
+		else if(TIMER[0] < 95){}
+		else if(TIMER[0] < 96)
+		{
+			playSound(45);
+			dittoMosiac(1);
+		}
+		else if(TIMER[0] < 110)
+		{
+			dittoMosiac(1);
+		}
+		else if(TIMER[0] < 115)
+		{
+			transform();
+			dittoMosiac(0);
+		}
+		else if(TIMER[0] < 130)
+		{
+			transform();
+			dittoMosiac(0);
+		}
+		else if(TIMER[0] < 175){}
+		else if(TIMER[0] < 176)
+		{
+			playSound(46);
+		}
+		else if(TIMER[0] < 185)
+		{
+			loadGameFreak();
+		}
+		else if(TIMER[0] < 255){}
+		else if(TIMER[0] < 265)
+		{
+			loadPresents();
+		}
+		else if(TIMER[0] < 370){}
+		else if(TIMER[0] < 371)
+		{
+			fadeScreenFast();
+		}
+		else if(TIMER[0] < 460){}
+		else if(TIMER[0] < 461)
 		{
 			init[27] = 1;
 			TIMER[0] = 0;
+			init[0] = 6;
 		}
 	}	
 	else if(init[27] == 1)
@@ -534,7 +655,7 @@ void notMain()
 
 #include <string.h>
 #include "include/gba.h"
-#include "companylogo.c"
+#include "gamefreak.c"
 #include "unown.c"
 #include "trees.c"
 #include "epicsuicune.c"
