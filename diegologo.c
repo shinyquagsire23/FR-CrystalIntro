@@ -116,6 +116,7 @@ void loadDittoGFX()
 	{
 		VAR[16] = 1;
 		copyPal(&dittoSparklePal, &OBJ_PaletteMem[0]);
+		copyPal(&mikachu2Pal, &OBJ_PaletteMem[16]);
 	}
 
 	for(int i = 0; i < 8; i++)

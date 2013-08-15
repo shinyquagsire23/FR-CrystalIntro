@@ -27,7 +27,7 @@ void treeDashing()
 	if(init[0] == 1)
 	{
 		loadTreeGFX();
-		playSong(277);
+		playSong(414);
 		changeIO(0x10,0x1FF);
 		changeIO(0x14,0x1FF);
 		changeIO(0x18,0x1FF);
@@ -216,7 +216,7 @@ void loadTreeGFX()
 
 	if(VAR[16] == 1)
 	{
-		copyPal(&wooper2Pal, &OBJ_PaletteMem[16]);
+		copyPal(&wooperSparklePal, &OBJ_PaletteMem[16]);
 	}
 
 	for(int i = 0; i < 8; i++)
