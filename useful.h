@@ -26,7 +26,7 @@ void fadeScreen()
 
 void fadeScreen2(int white, int r2, int r3)
 {
-	int (*func)(void) = (int (*)(void))0x089E0001;
+	int (*func)(void) = (int (*)(void))0x08AEFC11;
 	func();
 }
 
