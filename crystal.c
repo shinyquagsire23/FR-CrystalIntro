@@ -15,17 +15,17 @@ void initCrystal()
 
 void loadText()
 {
-	if(VAR[19] < 20)
+	if(VAR[19] < 15)
 		VAR[19] = VAR[19] + 1;
 	else
 		VAR[19] = 0;
 
-	if(VAR[19] >= 10 && init[30] == 1 && init[28] < numCharsinWord)
+	if(VAR[19] >= 7 && init[30] == 1 && init[28] < numCharsinWord)
 	{
 		init[30] = 0;
 		loadNextLetter();
 	}
-	else if(VAR[19] < 10)
+	else if(VAR[19] < 7)
 	{
 		init[30] = 1;
 	}
