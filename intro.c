@@ -644,12 +644,14 @@ void notMain()
 			TIMER[0] = 0;
 		}
 	}
+	
 	if(keyDown(KEY_A) || keyDown(KEY_B) || keyDown(KEY_START) || keyDown(KEY_SELECT) ||init[27] == 11)
    	{
      		int (*func)(void) = (int (*)(void))0x0800CC6B;
      		resetVars();
 		int x = func();
 	}
+	updateEverything();
 	return;
 }
 

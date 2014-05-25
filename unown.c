@@ -132,7 +132,7 @@ void loadAGFX()
 	clearOAM();
 	copyPal(&unown_aPal, &OBJ_PaletteMem[0]);
 	copyPal(&unownpulsePal, &OBJ_PaletteMem[16]);
-	copyPal(&blackPal, &BG_PaletteMem[16]);
+	copyPal(&blackPal, &BG_PaletteMem[0]);
 
 	LZ77UnCompVram(&unown_aTiles, &OBJData[0]);
 	LZ77UnCompVram(&unownpulse1Tiles, &OBJData[0x200]);

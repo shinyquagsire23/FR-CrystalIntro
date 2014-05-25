@@ -1,5 +1,5 @@
 #include "img_bins/ditto/ditto.h"
-#include "img_bins/ditto/gamefreak.h"
+#include "img_bins/ditto/laz.h"
 
 void initDitto()
 {
@@ -106,12 +106,11 @@ void loadDittoGFX()
 	BLDMOD = 0x1F40;
 	copyPal(&dittoPal, &OBJ_PaletteMem[0]);
 	copyPal(&rocketPal, &OBJ_PaletteMem[16]);
-	copyPal(&gamefreakPal, &BG_PaletteMem[0]);
+	copyPal(&lazPal, &BG_PaletteMem[0]);
 	LZ77UnCompVram(&ditto1Tiles, &OBJData[0]);
-	LZ77UnCompVram(&gamefreakTiles, &Tiles[0]);
+	LZ77UnCompVram(&lazTiles, &Tiles[0]);
 
-	LZ77UnCompVram(&gamefreakMap, &MapData[0]);
-	
+	LZ77UnCompVram(&lazMap, &MapData[0]);
 	if(keyDown(KEY_R))
 	{
 		VAR[16] = 1;
