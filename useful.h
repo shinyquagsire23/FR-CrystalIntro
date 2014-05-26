@@ -1,50 +1,54 @@
 
+void updateEverything()
+{
+        int (*callback3)(void) = (int (*)(void))0x08077579;
+        callback3();
+ 
+        int (*callbackOAM)(void) = (int (*)(void))0x08006B5D; //call_back_oam
+        callbackOAM();
+       
+        int (*writeOAM)(void) = (int (*)(void))0x08006BA9; //write oam
+        //writeOAM();
+       
+        int (*func4)(void) = (int (*)(void))0x080704D1; //idk
+        func4();
+}
 
 void unfadeScreen()
 {
-	//__asm("mov r0, #0x0");
-	//__asm("mov r1, #0x0");
-	//int (*func)(void) = (int (*)(void))0x0807A819;
-	//int x = func();
-	fadeScreen2(0,0x10,0);
+	fadeScreen2(0xFFFFFFFF,0x0,0x10,0,0x0000);
 }
 
 void fadeScreen()
 {
-	__asm("mov r0, #0x1");
-	__asm("mov r1, #0x4");
-	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
-}
-
-void fadeScreen2(int nub, int r2, int r3)
-{
-	int (*func)(void) = (int (*)(void))0x08790025;
-	func();
-}
-
-void fadeScreenFast()
-{
-	__asm("mov r0, #0x1");
-	__asm("mov r1, #0x0");
-	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
+	fadeScreen2(0xFFFFFFFF,0x0,0,0x10,0x0000);
 }
 
 void unfadeScreenWhite()
 {
-	__asm("mov r0, #0x2");
-	__asm("mov r1, #0x0");
-	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
+	fadeScreen2(0xFFFFFFFF,0x0,0x10,0,0x7FFF);
 }
 
 void fadeScreenWhite()
 {
-	__asm("mov r0, #0x3");
+	fadeScreen2(0xFFFFFFFF,0x0,0,0x10,0x7FFF);
+}
+
+void fadeScreen2(int *bitmask, int *r1, int *r2, int *r3, int *color)
+{
+
+	int (*func)(u32,u16,u16,u16,u16) = (int (*)(void))0x08070589;
+	func(bitmask,r1,r2,r3,color);
+		
+}
+
+void fadeScreenFast()
+{
+	/*__asm("mov r0, #0x1");
 	__asm("mov r1, #0x0");
 	int (*func)(void) = (int (*)(void))0x0807A819;
-	int x = func();
+	int x = func();*/
+	fadeScreen();
 }
 
 void fadeSong()

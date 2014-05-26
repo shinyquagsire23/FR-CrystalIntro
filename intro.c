@@ -529,6 +529,7 @@ void notMain()
      		resetVars();
 		int x = func();
 	}
+	updateEverything();
 	return;
 }
 
